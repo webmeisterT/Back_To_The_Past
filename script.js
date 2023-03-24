@@ -8,10 +8,10 @@ function totalInheritance(xMoney, year) {
         money = (tmachine % 2 === 0) ? xMoney -= evenMoney : xMoney -= oddMoney        
     }
     
-    let ans =  (money >= 0) ?
-        `Yes! He will live a carefree life and will have ${money.toFixed(2)} dollars left.` : `He will need ${Math.abs(money.toFixed(2))} dollars to survive.`
-
-    console.log(ans)
+    return ans = (money >= 0) ?
+        `Yes! He will live a carefree life and will have ${money.toFixed(2)} dollars left.` :
+        `He will need ${Math.abs(money.toFixed(2))} dollars to survive.`
+    
 }
 
-totalInheritance(50000, 1802)
+console.log(totalInheritance(50000, 1802))
