@@ -5,13 +5,13 @@ function totalInheritance(xMoney, year) {
 
     for (let tmachine = 1800; tmachine <= year; tmachine++) {
         oddMoney = 12000 + 50 * (age + (tmachine - 1800))
-        money = (tmachine%2 == 0) ? xMoney -= evenMoney : xMoney -= oddMoney        
+        money = (tmachine % 2 === 0) ? xMoney -= evenMoney : xMoney -= oddMoney        
     }
     
     let ans =  (money >= 0) ?
-        `Yes! He will live a carefree life and will have ${money.toFixed(2)} dollars left` : `He will need ${Math.abs(money.toFixed(2))} dollars to survive`
+        `Yes! He will live a carefree life and will have ${money.toFixed(2)} dollars left.` : `He will need ${Math.abs(money.toFixed(2))} dollars to survive.`
 
     console.log(ans)
 }
 
-totalInheritance(290000.90, 1808)
+totalInheritance(50000, 1802)
