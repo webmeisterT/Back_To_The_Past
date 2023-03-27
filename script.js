@@ -1,17 +1,26 @@
-function totalInheritance(xMoney, year) {
-    let age = 18
-    let evenMoney = 12000
-    let money = oddMoney = 0
-
-    for (let tmachine = 1800; tmachine <= year; tmachine++) {
-        oddMoney = 12000 + 50 * (age + (tmachine - 1800))
-        money = (tmachine % 2 === 0) ? xMoney -= evenMoney : xMoney -= oddMoney        
+class IvanInheritance {
+    
+    constructor() {
+        this.age = 18
+        this.evenMoney = 12000
+        this.money
+        this.oddMoney
     }
-    
-    return ans = (money >= 0) ?
-        `Yes! He will live a carefree life and will have ${money.toFixed(2)} dollars left.` :
-        `He will need ${Math.abs(money.toFixed(2))} dollars to survive.`
-    
+
+    totalInheritance(xMoney, year) {
+        for (let tmachine = 1800; tmachine <= year; tmachine++) {
+            this.oddMoney = 12000 + 50 * (this.age + (tmachine - 1800))
+            this.money = (tmachine % 2 === 0) ? xMoney -= this.evenMoney : xMoney -= this.oddMoney        
+        }
+        
+        let ans = (this.money >= 0) ?
+            `Yes! He will live a carefree life and will have ${this.money.toFixed(2)} dollars left.` :
+            `He will need ${Math.abs(this.money.toFixed(2))} dollars to survive.`
+        
+        return ans
+    }
+
 }
 
-console.log(totalInheritance(50000, 1802))
+let newIvanInheritance = new IvanInheritance()
+console.log(newIvanInheritance.totalInheritance(50000, 1802));
